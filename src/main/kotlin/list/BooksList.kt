@@ -39,9 +39,15 @@ fun main() {
     println(books)
 
     books.print()
+
+    val orderPublishYear = books.sorted()
+    orderPublishYear.print()
+
+    val orderByTitle = books.sortedBy { it.title }
+    orderByTitle.print()
 }
 
-fun MutableList<Book>.print() {
+fun List<Book>.print() {
     val formattedText = this.joinToString(separator = "\n") {
         " - ${it.toString()}"
     }

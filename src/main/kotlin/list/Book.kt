@@ -5,4 +5,8 @@ data class Book(
     val author: String,
     val publishYear: Long,
     val publishingCompany: String? = null
-)
+) : Comparable<Book> {
+    override fun compareTo(other: Book): Int {
+        return this.publishYear.compareTo(other.publishYear)
+    }
+}
