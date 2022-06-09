@@ -15,6 +15,15 @@ fun main(args: Array<String>) {
 
     val initialExpense = salaryWithIncrease.sum()
     println("Initial expense $initialExpense")
+
+    val months = 6.toBigDecimal()
+    val totalExpense = salaryWithIncrease.fold(initialExpense) { acc, wage ->
+        acc + (wage * months).setScale(2, RoundingMode.UP)
+    }
+
+    println("Total expense $totalExpense")
+
+
 }
 
 fun increaseRelativeCalculator(wage: BigDecimal, increase: BigDecimal): BigDecimal {
