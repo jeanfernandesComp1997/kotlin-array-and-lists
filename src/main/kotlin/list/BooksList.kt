@@ -45,6 +45,13 @@ fun main() {
 
     val orderByTitle = books.sortedBy { it.title }
     orderByTitle.print()
+
+    val filteredBooks = books
+        .filter { it.author.startsWith("Robert") }
+        .sortedBy { it.publishYear }
+        .map { it.title }
+
+    println(filteredBooks)
 }
 
 fun List<Book>.print() {
