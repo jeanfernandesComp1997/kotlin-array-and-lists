@@ -1,6 +1,6 @@
 package list
 
-val bookList = mutableListOf<Book?>(
+val bookList = mutableListOf<Book>(
     Book(
         "Microsserviços prontos para produção",
         "Susan J. Fowler",
@@ -18,7 +18,12 @@ val bookList = mutableListOf<Book?>(
         "Robert C. Martin",
         2008,
         "Addison Wesley"
-    )
+    ),
+    Book(
+        "Estruturas de dados com Java Script",
+        "Loiane Groner",
+        2018
+    ),
 )
 
 val bookListWithNull = mutableListOf<Book?>(
