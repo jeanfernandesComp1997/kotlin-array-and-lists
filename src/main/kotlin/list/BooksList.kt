@@ -53,11 +53,3 @@ fun main() {
 
     println(filteredBooks)
 }
-
-fun List<Book>.print() {
-    val formattedText = this.joinToString(separator = "\n") {
-        " - ${it.toString()}"
-    }
-
-    println(" #### Books List #### \n$formattedText")
-}
